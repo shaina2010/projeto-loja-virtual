@@ -89,6 +89,23 @@ escolha(opcao_menu_principal)
   //=================================================
   // U UPDATE (Atualizar Quantidade no Carrinho)
   //=================================================
+  }
+   senao {
+       escreva("Produro invalido1! ")
+
+
+   }
+       escreva("Pressione ENTER para voltar ao menu...")
+         leia(tecla_pausa)
+       pare
+
+
+       // ================================================
+       // R -READ (Visualizar o Carrinho)
+       // ================================================
+       caso 2:
+          limpa()
+          escreva("--- MEU CARRINHO DE COMPRAS ---")
   caso 3:
       limpa()
       escreva("--- ALTERAR QUANTIDADE NO CARRINHO ---")
