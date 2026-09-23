@@ -80,14 +80,15 @@ escolha(opcao_menu_principal)
   se (opcao_crud = 1)
   {
   se (quantidade_temp > 0 e quantidade_temp <= estoque_prod1) {
+
     qtd_carrinh_prod1 = qtd_carrinh_prod1 + quantidade_temp
         estoque_prod1 = estoque_prod1 - quantidade_temp
         escreva("Item adicionado ao carrinho com sucesso!")
 
-      } senao {
+  } senao {
           escreva("Quantidade invalida ou estoque insuficiente!")
 
-      }
+      
 
    }senao se (opcao_crud == 2)
    {
@@ -95,6 +96,28 @@ escolha(opcao_menu_principal)
          qtd_carrinh_prod2 = qtd_carrinh_prod2 + quantidade_temp
          estoque_prod2 = estoque_prod2 - quantidade_temp
          escreva("Item adicionado ao carrinho com sucesso!")
+
+         }senao{
+
+
+  escreva("Quantidade inválida ou estoque insuficiente!")
+
+
+           }
+       }
+       senao se (opcao_crud == 3)
+       {
+          se ( quantidade_temp > 0 e quantidade_temp <== estoque_prod3){
+          qtd_carrinho_prod3 = qtd_carrinho_prod3 + quantidade_temp
+          estoque_prod3 = estoque prod3 quantidade temp
+
+
+  escreva("Item adicionado ao carrinho com sucesso!")
+
+
+          } senao {
+              escreva("Quantidada inválida ou estoque insuficiente!")
+
     
 
 
