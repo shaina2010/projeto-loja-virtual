@@ -26,34 +26,21 @@ programa {
 
     // 1. LAÇO PRINCIPAL DO SISTEMA
     enquanto (opcao_menu_principal !=0){
-      // Limpa a tela a cada iteração para manter o menu organizado
-      limpa()
+       // Limpa a tela a cada iteração para manter o menu organizado
+       limpa()
 
-      escreva("=== BEM VINDO À NOSSA LOJA VIRTUAL ===")
+       escreva("=== BEM VINDO À NOSSA LOJA VIRTUAL ===")
 
-      escreva("------------------------------------------")
-      escreva("MENU PRINCIPAL
+       escreva("------------------------------------------")
+       escreva("MENU PRINCIPAL
        escreva("1. Ver Produtos e Adicionar ao Carrinho (CREATE)")
-
-
-escreva("2. Ver Meus Itens no Carrinho (READ)")
-
-
-escreva("3. Alterar Quantidae no Carrinho (UPDATE)")
-
-
-escreva("4.Remover Item do Carrinho (DELETE)")
-
-
-escreva("0. Finalizar Compra e Ir ao Pagamento ")
-
-
-escreva("Escolha uma opção: ")
-leia(opcao_menu_principal)
-
-
-escolha(opcao_menu_principal)
-{
+       escreva("2. Ver Meus Itens no Carrinho (READ)")
+       escreva("3. Alterar Quantidae no Carrinho (UPDATE)")
+       escreva("4.Remover Item do Carrinho (DELETE)")
+       escreva("0. Finalizar Compra e Ir ao Pagamento ")
+       escreva("Escolha uma opção: ")
+       leia(opcao_menu_principal)
+       escolha(opcao_menu_principal){
 
      // ====================================================
      // C - CREATE (Adicionar Itens ao Carrinho)
