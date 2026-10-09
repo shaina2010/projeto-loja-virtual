@@ -1,4 +1,4 @@
-programa {
+programa  {
   funcao inicio() {
 
     // Variáveis de controle de navegação
@@ -50,19 +50,18 @@ programa {
 
         caso 1:
 
-        limpa ()
+          limpa ()
 
         escreva("--- CATÁLOGO DE PRODUTOS ---")
-        escreva ("1. Camisa Esportiva (Estoque: ", estoque_prod1, ") R$", preco")
-        escreva ("2. Boné Casual (Estoque:", estoque_prod2, ") R$", preco")
-        escreva ("3. Tênis de Corrida (Estoque: ", estoque_prod3, ") R$", preco")
+        escreva ("1. Camisa Esportiva (Estoque: ", estoque_prod1, ") R$", preco)
+        escreva ("2. Boné Casual (Estoque:", estoque_prod2, ") R$", preco)
+        escreva ("3. Tênis de Corrida (Estoque: ", estoque_prod3, ") R$", preco)
         escreva ("Escolha o produto que deseja adicionar: ")
         leia(opcao_crud)
         escreva ("Digite a quantidade desejada: ")
-
         leia(quantidade_temp)
 
-        se (opcao_crud = 1){
+        se (opcao_crud == 1){
             se (quantidade_temp > 0 e quantidade_temp <= estoque_prod1) {
 
             qtd_carrinh_prod1 = qtd_carrinh_prod1 + quantidade_temp
@@ -71,8 +70,6 @@ programa {
 
             } senao {
               escreva("Quantidade invalida ou estoque insuficiente!")
-
-          
 
               }senao se (opcao_crud == 2) {
                 se (quantidade_temp > 0 e quantidade_temp <= estoque_prod2) {
@@ -110,13 +107,13 @@ programa {
                 escreva(" Seu carrinho esta vazio.")
               }senao{
                 se (qtd_carrinho_prod1 > o){
-                  escreva("- ", qtd_carrinho_prod1, "x camisa esportiva" (R$ ", (qtd_")
+                  escreva("- ", qtd_carrinho_prod1, "x camisa esportiva" (R$ ", (qtd_"))
                 } 
                 se (qtd_carrinho_prod2 > o){
-                  escreva("- ", qtd_carrinho_prod2, "x bone casual" (R$ ", (qtd_")
+                  escreva("- ", qtd_carrinho_prod2, "x bone casual" (R$ ", (qtd_"))
                 }
                 se (qtd_carrinho_prod3 > o){
-                  escreva("- ", qtd_carrinho_prod3, "x tenis de corrida" (R$ ", (qtd_")
+                  escreva("- ", qtd_carrinho_prod3, "x tenis de corrida" (R$ ", (qtd_"))
                 }
               }
 
@@ -183,7 +180,7 @@ programa {
        }
        senao {
          escreva(" Opção inválida!")
-       }
+       } 
      escreva("Pressione ENTER para voltar ao menu...")
      leia(tecla_pausa)
      pare 
@@ -215,9 +212,9 @@ programa {
          qtd_carrinho_prod3 = 0
          escreva("Tênis de Corrida removido do carrinho!")
         
-        }senao {
+       }senao {
            escreva("Opção inválida!")
-          }
+        }
 
           escreva("Pressione ENTER para voltar ao menu...")
           leia(tecla_pausa)
@@ -285,10 +282,9 @@ programa {
       escreva("==============================================")
       escreva("Obrigado por comprar conosco!")
     }
-    senao
-    {
+    senao{
         escreva("Carrinho vazio. Compra cancelada.")
-      }
+    }
    }
 }
     
