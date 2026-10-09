@@ -19,7 +19,7 @@ programa  {
      inteiro qtd_carrinho_prod3 = 0
 
     // Variáveis auxiliares para operações
-    inteiro quantidade_tempo = 0
+    inteiro quantidade_temp = 0
     real valor_total_bruto = 0.0
     real valor_desconto = 0.0
     real valor_final = 0.0
@@ -53,37 +53,37 @@ programa  {
           limpa ()
 
         escreva("--- CATÁLOGO DE PRODUTOS ---")
-        escreva ("1. Camisa Esportiva (Estoque: ", estoque_prod1, ") R$", preco)
-        escreva ("2. Boné Casual (Estoque:", estoque_prod2, ") R$", preco)
-        escreva ("3. Tênis de Corrida (Estoque: ", estoque_prod3, ") R$", preco)
+        escreva ("1. Camisa Esportiva (Estoque: ", estoque_prod1, ") R$", estoque_prod1)
+        escreva ("2. Boné Casual (Estoque:", estoque_prod2, ") R$", estoque_prod2)
+        escreva ("3. Tênis de Corrida (Estoque: ", estoque_prod3, ") R$", estoque_prod3)
         escreva ("Escolha o produto que deseja adicionar: ")
         leia(opcao_crud)
         escreva ("Digite a quantidade desejada: ")
         leia(quantidade_temp)
 
         se (opcao_crud == 1){
-            se (quantidade_tempo > 0 e quantidade_tempo <= estoque_prod1) {
+            se (quantidade_temp > 0 e quantidade_temp <= estoque_prod1) {
 
-            qtd_carrinho_prod1 = qtd_carrinho_prod1 + quantidade_tempo
-            estoque_prod1 = estoque_prod1 - quantidade_tempo
+            qtd_carrinho_prod1 = qtd_carrinho_prod1 + quantidade_temp
+            estoque_prod1 = estoque_prod1 - quantidade_temp
             escreva("Item adicionado ao carrinho com sucesso!")
 
             } senao {
               escreva("Quantidade invalida ou estoque insuficiente!")
 
               }senao se (opcao_crud == 2) {
-                se (quantidade_tempo > 0 e quantidade_tempo <= estoque_prod2) {
-                  qtd_carrinho_prod2 = qtd_carrinho_prod2 + quantidade_tempo
-                  estoque_prod2 = estoque_prod2 - quantidade_tempo
+                se (quantidade_temp > 0 e quantidade_temp <= estoque_prod2) {
+                  qtd_carrinho_prod2 = qtd_carrinho_prod2 + quantidade_temp
+                  estoque_prod2 = estoque_prod2 - quantidade_temp
                   escreva("Item adicionado ao carrinho com sucesso!")
                 }senao{
                   escreva("Quantidade inválida ou estoque insuficiente!")
                 }
               }
             senao se (opcao_crud == 3) {
-              se ( quantidade_tempo > 0 e quantidade_tempo <== estoque_prod3){
-                qtd_carrinho_prod3 = qtd_carrinho_prod3 + quantidade_tempo
-                estoque_prod3 = estoque prod3 quantidade_tempo
+              se ( quantidade_temp > 0 e quantidade_temp <= estoque_prod3){
+                qtd_carrinho_prod3 = qtd_carrinho_prod3 + quantidade_temp
+                estoque_prod3 = estoque_prod3 - quantidade_temp
                 escreva("Item adicionado ao carrinho com sucesso!")
                 } senao {
                   escreva("Quantidada inválida ou estoque insuficiente!")
@@ -106,13 +106,13 @@ programa  {
               se (qtd_carrinho_prod1 ==0 e qtd_carrinho_prod2 ==0 e qtd_carrinho_prod3){
                 escreva(" Seu carrinho esta vazio.")
               }senao{
-                se (qtd_carrinho_prod1 > o){
+                se (qtd_carrinho_prod1 > 0){
                   escreva("- ", qtd_carrinho_prod1, "x camisa esportiva" (R$ ", (qtd_"))
                 } 
-                se (qtd_carrinho_prod2 > o){
+                se (qtd_carrinho_prod2 > 0){
                   escreva("- ", qtd_carrinho_prod2, "x bone casual" (R$ ", (qtd_"))
                 }
-                se (qtd_carrinho_prod3 > o){
+                se (qtd_carrinho_prod3 > 0){
                   escreva("- ", qtd_carrinho_prod3, "x tenis de corrida" (R$ ", (qtd_"))
                 }
               }
@@ -140,11 +140,11 @@ programa  {
           se (opcao_crud == 1) {
             estoque_prod1 = estoque_prod1 + qtd_carrinho_prod 1
             escreva ("Digite a NOVA quantidade total para este item: ")
-            leia (quantidade_tempo)
+            leia (quantidade_temp)
 
-            se (quantidade_tempo >= 0 e quantidade_tempo <= estoque_prod1) {
-             qtd_carrinho_prod1 = quantidade_tempo
-             estoque_prod1 = estoque_prod1 quantidade_tempo
+            se (quantidade_temp >= 0 e quantidade_temp <= estoque_prod1) {
+             qtd_carrinho_prod1 = quantidade_temp
+             estoque_prod1 = estoque_prod1 quantidade_temp
              escreva ("Quantidade atualizada com sucesso!")
             } senao {
                estoque_prod1 = estoque_prod1qtd_carrinho_prod1
@@ -155,9 +155,9 @@ programa  {
             estoque_prod2 = estoque_prod2 + qtd_carrinho_prod2
             escreva("Digite a NOVA quantidade total para este item: ")
             leia(quantidade_temp)
-            se (quantidade_temp >= 0 e quantidade_tempo <= estoque_prod2) {
-              qtd_carrinho_prod2 = quantidade_tempo
-              estoque_prod2 = estoque_prod2 - quantidade_tempo
+            se (quantidade_temp >= 0 e quantidade_temp <= estoque_prod2) {
+              qtd_carrinho_prod2 = quantidade_temp
+              estoque_prod2 = estoque_prod2 - quantidade_temp
               escreva("Quantidade atualizada com sucesso!")
             } senao {
                 estoque_prod2 = estoque_prod2 - qtd_carrinho_prod2
@@ -167,10 +167,10 @@ programa  {
           senao se (opcao_crud == 3){                        
             estoque_prod3 = estoque_prod3 + qtd_carrinho_prod3
             escreva("Digite a NOVA quantidade total para este item: ")
-            leia(quantidade_tempo)
-            se (quantidade_tempo >= 0 e quantidade_tempo <= estoque_prod3){
-              qtd_carrinho_prod3 = quantidade_tempo
-              estoque_prod3 = estoque_prod3 - quantidade_tempo
+            leia(quantidade_temp)
+            se (quantidade_temp >= 0 e quantidade_temp <= estoque_prod3){
+              qtd_carrinho_prod3 = quantidade_temp
+              estoque_prod3 = estoque_prod3 - quantidade_temp
               escreva("Quantidade atualizada com sucesso!")
             } senao{
                 estoque_prod3 = estoque_prod3 - qtd_carrinho_prod3
@@ -273,7 +273,7 @@ programa  {
         escreva("- ", qtd_carrinho_prod2, " x Boné Casual = R$ ", (qtd_carrinho_prod2))
       }
       se (qtd_carrinho_prod3 > 0) {
-       escreva("- ", qtd_carrinho_prod3, " x Tênis de Corrida = R$ ", (qtd_carrinho_p))
+       escreva("- ", qtd_carrinho_prod3, " x Tênis de Corrida = R$ ", (qtd_carrinho_prod3))
       }
       escreva("----------------------------------------------")
       escreva("Valor total bruto: R$ ", valor_total_bruto, )
